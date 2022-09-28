@@ -75,6 +75,7 @@ class _HomeWidgetState extends State<HomeWidget> {
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width * 0.1,
               child: NavigationRail(
+                indicatorColor: Colors.black,
                 selectedIndex: _selectedIndex,
                 elevation: 1.0,
                 // backgroundColor: const Color.fromARGB(255, 59, 58, 58),
