@@ -18,14 +18,17 @@ class _ActivationKeyState extends State<ActivationKey> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Activation Key',
-                style: TextStyle(
-                    fontSize: 18.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w400),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 15.0),
+                child: const Text(
+                  'Activation Key',
+                  style: TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400),
+                ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
