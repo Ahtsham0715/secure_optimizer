@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:secure_optimizer/dashboard.dart';
-import 'package:secure_optimizer/home_page.dart';
+import 'package:get/get.dart';
+import 'package:secure_optimizer/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Colors.blue.shade800,
       ),
-      home: const HomeWidget(),
+      home: const SplashScreen(),
     );
   }
 }

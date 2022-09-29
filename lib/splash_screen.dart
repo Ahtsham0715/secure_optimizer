@@ -1,28 +1,39 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:secure_optimizer/dashboard.dart';
+import 'package:get/get.dart';
+import 'package:secure_optimizer/home_page.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
-  BuildContext? get context => null;
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
 
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // super.initState();
-    Timer(const Duration(seconds: 3), () {
-      Navigator.of(context!).pushReplacement(MaterialPageRoute(
-          builder: (BuildContext context) => const DashboardPage()));
+    super.initState();
+    initTimer();
+  }
+
+  Future<void> initTimer() async {
+    Timer(const Duration(seconds: 3), () async {
+      Get.to(
+        () => const HomeWidget(),
+      );
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(
-        'assets/images/icon.png',
-        fit: BoxFit.contain,
+    return Container(
+      color: Colors.white,
+      child: Center(
+        child: Image.asset(
+          'assets/images/icon.png',
+          fit: BoxFit.contain,
+        ),
       ),
     );
   }
