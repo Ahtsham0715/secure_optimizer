@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_gradient_circle.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_scan_button.dart';
+import 'package:secure_optimizer/custom%20widgets/custom_usage_circle.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -88,35 +90,22 @@ class _DashboardPageState extends State<DashboardPage> {
           SizedBox(height: MediaQuery.of(context).size.height * 0.2),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Column(
-                children: [
-                  CustomPaint(
-                    size: Size(
-                        50,
-                        (50 * 1.0140845070422535)
-                            .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-                    painter: GradientCircleCustomPainter(),
-                  ),
-                  const Text(
-                    'Memory\nUsage',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 14.0,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500),
-                  ),
-                ],
+              UsageCircle(
+                value: '50°',
+                txt: 'Memory Usage',
+              ),
+              UsageCircle(
+                value: '90%',
+                txt: 'Memory Usage',
+              ),
+              UsageCircle(
+                value: '75%',
+                txt: 'Memory Usage',
               ),
             ],
           ),
-          CustomPaint(
-            size: Size(
-                50,
-                (50 * 1.0140845070422535)
-                    .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-            painter: GradientCircleCustomPainter(),
-          )
           // Container(
           //   padding: const EdgeInsets.all(25.0),
           //   decoration: const BoxDecoration(
