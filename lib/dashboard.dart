@@ -62,13 +62,13 @@ class _DashboardPageState extends State<DashboardPage> {
             }),
             child: CustomPaint(
               size: Size(
-                  100,
-                  (100 * 1.0305676855895196)
+                  150,
+                  (150 * 1.0305676855895196)
                       .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
               painter: RPSCustomPainter(),
             ),
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.15),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.1),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.min,
