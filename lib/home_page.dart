@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secure_optimizer/activation_key.dart';
 import 'package:secure_optimizer/custom%20widgets/utils.dart';
 import 'package:secure_optimizer/dashboard.dart';
 import 'package:secure_optimizer/memory_cleaner.dart';
@@ -17,7 +18,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   var list = [
     const DashboardPage(),
     const MemoryCleaner(),
-    const DashboardPage(),
+    const ActivationKey(),
   ];
 
   var title = [
