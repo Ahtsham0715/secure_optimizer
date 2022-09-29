@@ -27,3 +27,10 @@ class SplashScreen extends StatelessWidget {
     );
   }
 }
+
+// Center(
+//       child: Image.asset(
+//         'assets/images/icon.png',
+//         fit: BoxFit.contain,
+//       ),
+//     );
