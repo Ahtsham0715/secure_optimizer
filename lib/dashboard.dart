@@ -23,6 +23,7 @@ class _DashboardPageState extends State<DashboardPage> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Row(
@@ -67,7 +68,7 @@ class _DashboardPageState extends State<DashboardPage> {
               painter: RPSCustomPainter(),
             ),
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.min,

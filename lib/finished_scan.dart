@@ -19,7 +19,14 @@ class _FinishedScanState extends State<FinishedScan> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset('assets/images/checked.png'),
+              CircleAvatar(
+                backgroundColor: Colors.transparent,
+                radius: 100.0,
+                child: Image.asset(
+                  'assets/images/checked.png',
+                  // fit: BoxFit.scaleDown,
+                ),
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,7 +41,7 @@ class _FinishedScanState extends State<FinishedScan> {
                       ),
                     ),
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.07),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.06),
                   RichText(
                     text: TextSpan(children: [
                       TextSpan(
@@ -75,30 +82,59 @@ class _FinishedScanState extends State<FinishedScan> {
               ),
             ],
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-          Stack(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  border: Border.all(width: 1.0, color: Colors.black),
+          // SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.5,
+            child: Stack(
+              alignment: AlignmentDirectional.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 60.0),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(2.0),
+                      border: Border.all(width: 1.5, color: Colors.black),
+                    ),
+                    height: MediaQuery.of(context).size.height * 0.4,
+                    width: MediaQuery.of(context).size.width * 0.6,
+                  ),
                 ),
-                height: MediaQuery.of(context).size.height * 0.4,
-                width: MediaQuery.of(context).size.width * 0.8,
-                child: ListView.builder(
-                    itemCount: 25,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Text(
-                        'Item $index',
-                        style: TextStyle(
-                          fontSize: 16.0,
+                Positioned(
+                  left: 120,
+                  top: 26.0,
+                  child: Container(
+                    color: Colors.white,
+                    child: const Text(
+                      'Junk-9574 MB',
+                      style: TextStyle(
+                          fontSize: 14.0,
                           color: Colors.black,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      );
-                    }),
-              ),
-            ],
+                          fontWeight: FontWeight.w400),
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(2.0),
+                    border: Border.all(width: 1.5, color: Colors.black),
+                  ),
+                  height: MediaQuery.of(context).size.height * 0.35,
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: ListView.builder(
+                      itemCount: 25,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Text(
+                          'Item $index',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        );
+                      }),
+                ),
+              ],
+            ),
           ),
         ],
       ),
