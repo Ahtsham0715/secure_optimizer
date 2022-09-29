@@ -70,12 +70,13 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
           ),
           Container(
-            padding: EdgeInsets.all(25.0),
+            padding: const EdgeInsets.all(25.0),
             decoration: const BoxDecoration(
                 shape: BoxShape.circle,
-                gradient: LinearGradient(
-                  begin: Alignment.bottomLeft,
-                  end: Alignment.topRight,
+                gradient: RadialGradient(
+                  // begin: Alignment.bottomLeft,
+                  // end: Alignment.topRight,
+                  tileMode: TileMode.decal,
                   colors: [
                     Color(0xFFFFFFFF),
                     Color(0xFF7EA9E9),
