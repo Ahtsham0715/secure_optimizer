@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:secure_optimizer/custom%20widgets/utils.dart';
 import 'package:secure_optimizer/dashboard.dart';
+import 'package:secure_optimizer/memory_cleaner.dart';
 
 class HomeWidget extends StatefulWidget {
   const HomeWidget({Key? key}) : super(key: key);
@@ -15,13 +16,8 @@ class _HomeWidgetState extends State<HomeWidget> {
 
   var list = [
     const DashboardPage(),
+    const MemoryCleaner(),
     const DashboardPage(),
-    const DashboardPage(),
-    // const AttendanceSheet(),
-    // const SubjectsPage(),
-    // const ReportPage(),
-    // SettingsPage(),
-    // SearchPage()
   ];
 
   var title = [
@@ -57,7 +53,7 @@ class _HomeWidgetState extends State<HomeWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.only(top: 13.0),
             child: Text(
               '587-658-987',
               style: TextStyle(fontSize: 20.0, color: Colors.white),

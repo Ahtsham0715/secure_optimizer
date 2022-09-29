@@ -17,35 +17,6 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Colors.blue.shade800,
-      //   leading: const Icon(
-      //     Icons.lock,
-      //     color: Colors.green,
-      //     size: 25.0,
-      //   ),
-      //   title: const Text(
-      //     'Secure Optimizer',
-      //     style: TextStyle(fontSize: 20.0, color: Colors.white),
-      //   ),
-      //   actions: const [
-      //     Padding(
-      //       padding: EdgeInsets.all(8.0),
-      //       child: Icon(
-      //         Icons.phone,
-      //         color: Colors.green,
-      //         size: 25.0,
-      //       ),
-      //     ),
-      //     Padding(
-      //       padding: EdgeInsets.all(8.0),
-      //       child: Text(
-      //         '587-658-987',
-      //         style: TextStyle(fontSize: 20.0, color: Colors.white),
-      //       ),
-      //     ),
-      //   ],
-      // ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -110,56 +81,14 @@ class _DashboardPageState extends State<DashboardPage> {
               ),
             ],
           ),
-          // Container(
-          //   padding: const EdgeInsets.all(25.0),
-          //   decoration: const BoxDecoration(
-          //       shape: BoxShape.circle,
-          //       gradient: RadialGradient(
-          //         // begin: Alignment.bottomLeft,
-          //         // end: Alignment.topRight,
-          //         tileMode: TileMode.decal,
-          //         colors: [
-          //           Color(0xFFFFFFFF),
-          //           Color(0xFF7EA9E9),
-          //         ],
-          //       )),
-          //   child: const CircleAvatar(
-          //     radius: 40,
-          //   ),
-          // )
+          SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+          const Text(
+            '1.2GB space can be cleared',
+            style:
+                TextStyle(fontSize: 18.0, color: Colors.black, wordSpacing: 2),
+          ),
         ],
       ),
-      // bottomNavigationBar: ListTile(
-      //   tileColor: Colors.blue.shade800,
-      //   // padding: const EdgeInsets.all(15.0),
-      // leading: const Text(
-      //   'Secure Optimizer @2022',
-      //   style: TextStyle(fontSize: 19.0, color: Colors.white),
-      // ),
-      //   trailing: SizedBox(
-      //     // height: MediaQuery.of(context).size.width * 0.5,
-      //     width: MediaQuery.of(context).size.width * 0.5,
-      //     child: ButtonBar(
-      //       // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //       children: [
-      //         TextButton(
-      //           onPressed: () {},
-      //           child: const Text(
-      //             'Terms And Conditions',
-      //             style: TextStyle(fontSize: 15.0, color: Colors.white),
-      //           ),
-      //         ),
-      //         TextButton(
-      //           onPressed: () {},
-      //           child: const Text(
-      //             'Privacy Policy',
-      //             style: TextStyle(fontSize: 15.0, color: Colors.white),
-      //           ),
-      //         ),
-      //       ],
-      //     ),
-      //   ),
-      // ),
     );
   }
 }
