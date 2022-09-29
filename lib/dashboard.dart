@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:secure_optimizer/custom%20widgets/custom_gradient_circle.dart';
+import 'package:secure_optimizer/custom%20widgets/custom_scan_button.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -8,6 +10,8 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  //Add this CustomPaint widget to the Widget Tree
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,23 +73,42 @@ class _DashboardPageState extends State<DashboardPage> {
               ],
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(25.0),
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                gradient: RadialGradient(
-                  // begin: Alignment.bottomLeft,
-                  // end: Alignment.topRight,
-                  tileMode: TileMode.decal,
-                  colors: [
-                    Color(0xFFFFFFFF),
-                    Color(0xFF7EA9E9),
-                  ],
-                )),
-            child: const CircleAvatar(
-              radius: 40,
+          InkWell(
+            onTap: (() {
+              print('scan button pressed.');
+            }),
+            child: CustomPaint(
+              size: Size(
+                  100,
+                  (100 * 1.0305676855895196)
+                      .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+              painter: RPSCustomPainter(),
             ),
+          ),
+          CustomPaint(
+            size: Size(
+                50,
+                (50 * 1.0140845070422535)
+                    .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+            painter: GradientCircleCustomPainter(),
           )
+          // Container(
+          //   padding: const EdgeInsets.all(25.0),
+          //   decoration: const BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       gradient: RadialGradient(
+          //         // begin: Alignment.bottomLeft,
+          //         // end: Alignment.topRight,
+          //         tileMode: TileMode.decal,
+          //         colors: [
+          //           Color(0xFFFFFFFF),
+          //           Color(0xFF7EA9E9),
+          //         ],
+          //       )),
+          //   child: const CircleAvatar(
+          //     radius: 40,
+          //   ),
+          // )
         ],
       ),
       // bottomNavigationBar: ListTile(
