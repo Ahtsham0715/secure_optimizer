@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_gradient_circle.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_scan_button.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_usage_circle.dart';
+import 'package:secure_optimizer/finished_scan.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -53,6 +55,9 @@ class _DashboardPageState extends State<DashboardPage> {
           InkWell(
             onTap: (() {
               print('scan button pressed.');
+              Get.to(
+                () => const FinishedScan(),
+              );
             }),
             child: CustomPaint(
               size: Size(
