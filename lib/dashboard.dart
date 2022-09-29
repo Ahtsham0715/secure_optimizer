@@ -85,6 +85,31 @@ class _DashboardPageState extends State<DashboardPage> {
               painter: RPSCustomPainter(),
             ),
           ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  CustomPaint(
+                    size: Size(
+                        50,
+                        (50 * 1.0140845070422535)
+                            .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
+                    painter: GradientCircleCustomPainter(),
+                  ),
+                  const Text(
+                    'Memory\nUsage',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 14.0,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ],
+              ),
+            ],
+          ),
           CustomPaint(
             size: Size(
                 50,
@@ -114,10 +139,10 @@ class _DashboardPageState extends State<DashboardPage> {
       // bottomNavigationBar: ListTile(
       //   tileColor: Colors.blue.shade800,
       //   // padding: const EdgeInsets.all(15.0),
-      //   leading: const Text(
-      //     'Secure Optimizer @2022',
-      //     style: TextStyle(fontSize: 19.0, color: Colors.white),
-      //   ),
+      // leading: const Text(
+      //   'Secure Optimizer @2022',
+      //   style: TextStyle(fontSize: 19.0, color: Colors.white),
+      // ),
       //   trailing: SizedBox(
       //     // height: MediaQuery.of(context).size.width * 0.5,
       //     width: MediaQuery.of(context).size.width * 0.5,

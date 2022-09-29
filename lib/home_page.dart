@@ -34,11 +34,14 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leadingWidth: MediaQuery.of(context).size.width * 0.1,
         backgroundColor: Colors.blue.shade800,
-        leading: const Icon(
-          Icons.lock,
-          color: Colors.green,
-          size: 25.0,
+        leading: Image.asset(
+          'assets/images/icon.png',
+          fit: BoxFit.fill,
+          scale: 10,
+          height: MediaQuery.of(context).size.height * 0.1,
+          // width: MediaQuery.of(context).size.width * 0.1,
         ),
         title: const Text(
           'Secure Optimizer',
