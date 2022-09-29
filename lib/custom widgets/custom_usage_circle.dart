@@ -29,21 +29,24 @@ class UsageCircle extends StatelessWidget {
                   painter: GradientCircleCustomPainter(),
                 ),
               ),
-              Text(
-                val.toString(),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    fontSize: 14.0,
-                    color: Color(0xFF004AAD),
-                    fontWeight: FontWeight.w500),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0, bottom: 5.0),
+                child: Text(
+                  val.toString(),
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                      fontSize: 14.0,
+                      color: Color(0xFF004AAD),
+                      fontWeight: FontWeight.w500),
+                ),
               ),
             ],
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.008),
           Text(
             bottomtxt.toString(),
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
                 fontSize: 14.0,
                 color: Colors.black,
                 fontWeight: FontWeight.w500),

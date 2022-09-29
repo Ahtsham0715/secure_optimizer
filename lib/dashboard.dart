@@ -61,9 +61,12 @@ class _DashboardPageState extends State<DashboardPage> {
                   color: Colors.red,
                   size: 30.0,
                 ),
-                const Text(
-                  'Optimising items frees up storage space on your device.',
-                  style: TextStyle(fontSize: 17.0, color: Colors.black),
+                const Padding(
+                  padding: EdgeInsets.all(5.0),
+                  child: Text(
+                    'Optimising items frees up storage space on your device.',
+                    style: TextStyle(fontSize: 17.0, color: Colors.black),
+                  ),
                 ),
                 TextButton(
                   onPressed: () {},
@@ -75,6 +78,7 @@ class _DashboardPageState extends State<DashboardPage> {
               ],
             ),
           ),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.1),
           InkWell(
             onTap: (() {
               print('scan button pressed.');
@@ -87,22 +91,22 @@ class _DashboardPageState extends State<DashboardPage> {
               painter: RPSCustomPainter(),
             ),
           ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.1),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.min,
             children: [
               UsageCircle(
+                value: '70%',
+                txt: 'Memory\nUsage',
+              ),
+              UsageCircle(
                 value: '50°',
-                txt: 'Memory Usage',
+                txt: 'Processor\nTemprature',
               ),
               UsageCircle(
-                value: '90%',
-                txt: 'Memory Usage',
-              ),
-              UsageCircle(
-                value: '75%',
-                txt: 'Memory Usage',
+                value: '25%',
+                txt: 'Storage\nUsage',
               ),
             ],
           ),
