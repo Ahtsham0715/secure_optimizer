@@ -13,6 +13,12 @@ def cpu_percent():
     json_file['query'] = psutil.cpu_percent(interval=1)
     return jsonify(json_file)
 
+@app.route('/ram_usage')
+def ram_usage():
+    json_file = {}
+    json_file['query'] = psutil.virtual_memory().percent
+    return jsonify(json_file)
+
 
 if __name__ == '__main__':
     app.run()
