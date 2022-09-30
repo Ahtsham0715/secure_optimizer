@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:get/get.dart';
-import 'package:secure_optimizer/custom%20widgets/custom_gradient_circle.dart';
+import 'package:system_resources/system_resources.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_scan_button.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_usage_circle.dart';
-import 'package:secure_optimizer/finished_scan.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -54,11 +51,17 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.1),
           InkWell(
-            onTap: (() {
+            onTap: (() async {
               print('scan button pressed.');
-              Get.to(
-                () => const FinishedScan(),
-              );
+              print(
+                  'Memory Usage     : ${(SystemResources.memUsage() * 100).toInt()}%');
+              // final deviceInfoPlugin = DeviceInfoPlugin();
+              // final deviceInfo = await deviceInfoPlugin.windowsInfo;
+              // final map = deviceInfo.toMap();
+              // print(map);
+              // Get.to(
+              //   () => const FinishedScan(),
+              // );
             }),
             child: CustomPaint(
               size: Size(

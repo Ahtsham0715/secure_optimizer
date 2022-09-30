@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:secure_optimizer/splash_screen.dart';
+import 'package:system_resources/system_resources.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemResources.init();
+
   runApp(const MyApp());
 }
 
