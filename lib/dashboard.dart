@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:system_resources/system_resources.dart';
+// import 'package:system_resources/system_resources.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_scan_button.dart';
 import 'package:secure_optimizer/custom%20widgets/custom_usage_circle.dart';
 
@@ -53,8 +53,8 @@ class _DashboardPageState extends State<DashboardPage> {
           InkWell(
             onTap: (() async {
               print('scan button pressed.');
-              print(
-                  'Memory Usage     : ${(SystemResources.memUsage() * 100).toInt()}%');
+              // print(
+              //     'Memory Usage     : ${(SystemResources.memUsage() * 100).toInt()}%');
               // final deviceInfoPlugin = DeviceInfoPlugin();
               // final deviceInfo = await deviceInfoPlugin.windowsInfo;
               // final map = deviceInfo.toMap();
